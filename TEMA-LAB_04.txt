@@ -1,0 +1,9 @@
+PP-1212B-Lungoci Albert Tema Lab4
+
+/////////////////////////////////
+EXPLICATII
+/////////////////////////////////
+
+Implementeaza un web crawler in Kotlin care descarca resurse de pe internet și le parseaza in functie de tipul continutului. Punctul central este interfata Parser, care defineste metoda comuna parse() pe care toti parserii trebuie sa o implementeze.
+Cei trei parseri, JsonParser, XmlParser și YamlParser, implementeaza fiecare interfata Parser și adauga câte o metoda specifica formatului lor. JsonParser foloseste libraria org.json, XmlParser folosește Jsoup in mod XML, iar YamlParser foloseste SnakeYAML.
+Clasa Crawler primeste un URL, face un request HTTP GET prin HttpURLConnection si in functia processContent() detecteaza tipul de continut pentru a alege automat parserul potrivit. HttpResponse este un data class simplu creat pentru a stoca raspunsul HTTP.
